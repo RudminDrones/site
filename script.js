@@ -137,15 +137,8 @@ document.addEventListener("DOMContentLoaded", function() {
       window.addEventListener('resize', handleResize);
       handleResize();
     }
-      // Dropdown toggle for mobile (improved: allow toggling by clicking anywhere on the nav-dropdown > a)
-      const navDropdown = mainNav.querySelector('.nav-dropdown > a');
-      const dropdownContainer = mainNav.querySelector('.nav-dropdown');
-      if (navDropdown && dropdownContainer) {
-        navDropdown.addEventListener('click', function(e) {
-          if (window.innerWidth <= 900) {
-            e.preventDefault();
-            dropdownContainer.classList.toggle('open');
-          }
-        });
-      }
+      // On small screens the dropdown links are always visible, so the
+      // "3D Visualization" link should simply navigate without any extra
+      // toggle behavior. The previous handler intercepted the click and
+      // prevented navigation which broke the link on mobile.
 });

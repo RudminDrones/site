@@ -373,9 +373,9 @@ a {
 @media (max-width: 900px) {
   .hamburger-menu {
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 18px;
-    right: 18px;
+    right: 20px;
     z-index: 1100;
   }
   .main-nav {
@@ -515,7 +515,7 @@ a {
 }@media (max-width: 900px) {
   .hamburger-menu {
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 15px;
     right: 20px;
   }
