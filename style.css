@@ -345,8 +345,8 @@ a {
   display: none;
   flex-direction: column;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   cursor: pointer;
@@ -373,9 +373,9 @@ a {
 @media (max-width: 900px) {
   .hamburger-menu {
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 18px;
-    right: 18px;
+    right: 24px;
     z-index: 1100;
   }
   .main-nav {
