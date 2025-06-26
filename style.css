@@ -21,6 +21,9 @@ html.light-mode, body.light-mode {
 
 
 /* --- Global Styles & Fonts --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -76,6 +79,7 @@ a {
     color: #fff;
     font-family: 'Playfair Display', serif;
     font-weight: bold;
+    font-size: 0.95em;
 }
 
 .main-nav {
@@ -344,7 +348,9 @@ a {
 .hamburger-menu {
   display: none;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
+  padding: 8px;
   width: 40px;
   height: 40px;
   background: none;
@@ -355,8 +361,8 @@ a {
 .hamburger-menu span {
   display: block;
   height: 4px;
-  width: 28px;
-  margin: 4px auto;
+  width: 24px;
+  margin: 4px 0;
   background: #fff;
   border-radius: 2px;
   transition: 0.3s;
@@ -374,8 +380,8 @@ a {
   .hamburger-menu {
     display: flex;
     position: fixed;
-    top: 18px;
-    right: 20px;
+    top: 15px;
+    right: 15px;
     z-index: 1100;
   }
   .main-nav {
@@ -517,7 +523,7 @@ a {
     display: flex;
     position: fixed;
     top: 15px;
-    right: 20px;
+    right: 15px;
   }
   .main-nav {
     position: fixed;
