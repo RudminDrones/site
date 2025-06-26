@@ -1,14 +1,14 @@
 // This function can be called at any time to apply the theme
 function applyTheme(theme) {
-    const body = document.body;
+    const root = document.documentElement;
     const toggleIcon = document.querySelector('#theme-toggle .material-symbols-outlined');
     const taglineLogo = document.getElementById('tagline-logo'); // Only exists on homepage
 
     // Set the correct theme class on the body
     if (theme === 'light') {
-        body.classList.add('light-mode');
+        root.classList.add('light-mode');
     } else {
-        body.classList.remove('light-mode');
+        root.classList.remove('light-mode');
     }
 
     // Update the toggle icon
@@ -37,8 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const themeToggleButton = document.getElementById('theme-toggle');
     if (themeToggleButton) {
         themeToggleButton.addEventListener('click', () => {
-            // Check the current theme from the body class and toggle it
-            const newTheme = document.body.classList.contains('light-mode') ? 'dark' : 'light';
+            // Check the current theme from the root element and toggle it
+            const newTheme = document.documentElement.classList.contains('light-mode') ? 'dark' : 'light';
             // Apply the new theme visually
             applyTheme(newTheme);
             // Save the new theme preference for other pages

@@ -9,7 +9,7 @@
     --button-text: #fff;
 }
 
-body.light-mode {
+html.light-mode, body.light-mode {
     --bg-color: #f4f4f4;
     --text-color: #333;
     --header-text-color: #555;
