@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Rudmin Drones</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+</head>
+<body>
+
+    <header class="site-header">
+         <div class="logo-container">
+            <img src="logo_white.png" alt="Rudmin Drones Logo">
+            <span class="logo-text">drones.rudmins.us</span>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <div class="nav-dropdown">
+                <a href="3d-visualization.html">3D Visualization</a>
+                <div class="dropdown-content">
+                    <a href="faq.html">FAQ</a>
+                    <a href="examples.html">Examples</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact Us</a>
+            <button id="theme-toggle" class="theme-toggle"><span class="material-symbols-outlined">light_mode</span></button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="title-box">
+                <h1>FAQ</h1>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="faq-item">
+                <h2>What is the "Primary Area of Interest" that the base package provides?</h2>
+                <p>A model needs to focus on a single area at a specific distance. You can choose to focus on a large property at a high elevation, and the model will be best viewed from that elevation. Or, you can choose to focus on a structure, up close, and the structure will be high quality, while the surroundings will be blurry (we can crop them if you choose). Via manual editing, we can combine multiple models to make a 3d visualization that has multiple high-quality 3d structures. Although this costs extra due to the editing time involved, the results speak for themselves.</p>
+            </div>
+
+            <div class="faq-columns">
+                <div class="column">
+                    <div class="embed-container model-embed-placeholder"
+                         data-id="faq-cropped"
+                         data-poster="https://rdcont.us/25_24_06_rudmin_drones_private_residence_cropped_poster.png"
+                         data-viewer="https://viewer.rdcont.us/?skybox=https://viewer.rdcont.us/skybox.png&settings=https://rdcont.us/25_24_06_rudmin_drones_private_residence_cropped.json&content=https://rdcont.us/25_24_06_rudmin_drones_private_residence_cropped.compressed.ply&poster=https://rdcont.us/25_24_06_rudmin_drones_private_residence_cropped_poster.png">
+                    </div>
+                    <h3>House</h3>
+                    <p>1 Primary Area of Interest, 1 model</p>
+                </div>
+                <div class="column">
+                    <div class="embed-container model-embed-placeholder"
+                         data-id="faq-full"
+                         data-poster="https://rdcont.us/25_24_06_rudmin_drones_private_residence_full_poster.png"
+                         data-viewer="https://viewer.rdcont.us/?skybox=https://viewer.rdcont.us/skybox.png&settings=https://rdcont.us/25_24_06_rudmin_drones_private_residence_full.json&content=https://rdcont.us/25_24_06_rudmin_drones_private_residence_full.compressed.ply&poster=https://rdcont.us/25_24_06_rudmin_drones_private_residence_full_poster.png">
+                    </div>
+                    <h3>Full Property</h3>
+                    <p>1 Primary Area of Interest, 1 model</p>
+                </div>
+                <div class="column">
+                    <div class="embed-container model-embed-placeholder"
+                         data-id="faq-combined"
+                         data-poster="https://rdcont.us/25_24_06_rudmin_drones_private_residence_combined_poster.png"
+                         data-viewer="https://viewer.rdcont.us/?skybox=https://viewer.rdcont.us/skybox.png&settings=https://rdcont.us/25_24_06_rudmin_drones_private_residence_combined.json&content=https://rdcont.us/25_24_06_rudmin_drones_private_residence_combined.compressed.ply&poster=https://rdcont.us/25_24_06_rudmin_drones_private_residence_combined_poster.png">
+                    </div>
+                    <h3>House, Sheds, Full Property</h3>
+                    <p>3 Areas of Interest, 3 models combined</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h2>What is the turnaround time?</h2>
+                <p>Flying drones is dependant on weather, Federal Aviation Administration regulations, wildlife, air traffic, and other factors. We will do our best to schedule you within a week, and deliver the model within a week after that.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>What if we have to reschedule?</h2>
+                <p>There is no-charge for rescheduling by email up to 24 hours before the flight. If we arrive at the site and we cannot fly due to environmental concerns such as birds, weather, or air traffic then we will reschedule at no cost. If however, we arrive at the site and the client has not prepared the site and wishes to reschedule due to aesthetic concerns, the client will be charged a $200 rescheduling fee.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© rudminsdrones, all rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

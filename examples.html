@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples - Rudmin Drones</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+</head>
+<body>
+
+    <header class="site-header">
+         <div class="logo-container">
+            <img src="logo_white.png" alt="Rudmin Drones Logo">
+            <span class="logo-text">drones.rudmins.us</span>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <div class="nav-dropdown">
+                <a href="3d-visualization.html">3D Visualization</a>
+                <div class="dropdown-content">
+                    <a href="faq.html">FAQ</a>
+                    <a href="examples.html">Examples</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact Us</a>
+            <button id="theme-toggle" class="theme-toggle"><span class="material-symbols-outlined">light_mode</span></button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="title-box">
+                <h1>3D Property Visualization Examples</h1>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="example-item">
+                <h3>Private Residence</h3>
+                <h4>See <a href="faq.html">FAQ</a> for other variations</h4>
+                <div class="embed-container model-embed-placeholder"
+                     data-id="ex-residence"
+                     data-poster="https://rdcont.us/25_24_06_rudmin_drones_private_residence_cropped_poster.png"
+                     data-viewer="https://viewer.rdcont.us/?skybox=https://viewer.rdcont.us/skybox.png&settings=https://rdcont.us/25_24_06_rudmin_drones_private_residence_cropped.json&content=https://rdcont.us/25_24_06_rudmin_drones_private_residence_cropped.compressed.ply&poster=https://rdcont.us/25_24_06_rudmin_drones_private_residence_cropped_poster.png">
+                </div>
+            </div>
+            <div class="example-item">
+                <h3>Blue Crow Antiques</h3>
+                <h4>Location: Parksley, VA</h4>
+                <div class="embed-container model-embed-placeholder"
+                     data-id="ex-bluecrow"
+                     data-poster="https://rdcont.us/25_24_06_blue_crow_blue_crow_poster.png"
+                     data-viewer="https://viewer.rdcont.us/?skybox=https://viewer.rdcont.us/skybox.png&settings=https://rdcont.us/25_24_06_blue_crow_blue_crow.json&content=https://rdcont.us/25_24_06_blue_crow_blue_crow.compressed.ply&poster=https://rdcont.us/25_24_06_blue_crow_blue_crow_poster.png">
+                </div>
+            </div>
+             <div class="example-item">
+                <h3>Former Candy Shop</h3>
+                <h4>Location: Cape Charles, VA</h4>
+                <div class="embed-container model-embed-placeholder"
+                     data-id="ex-candyshop"
+                     data-poster="https://rdcont.us/25_06_24_3255_stone_rd_poster.png"
+                     data-viewer="https://viewer.rdcont.us/?skybox=https://viewer.rdcont.us/skybox.png&settings=https://rdcont.us/25_06_24_3255_stone_rd.json&content=https://rdcont.us/25_06_24_3255_stone_rd.compressed.ply&poster=https://rdcont.us/25_06_24_3255_stone_rd_poster.png">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© rudminsdrones, all rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
