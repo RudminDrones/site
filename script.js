@@ -115,10 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
         mainNav.classList.remove('open');
         if (hamburger) {
           hamburger.classList.remove('active');
-          hamburger.style.display = 'none';
         }
-      } else {
-        if (hamburger) hamburger.style.display = 'flex';
       }
     }
 
