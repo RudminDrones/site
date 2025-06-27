@@ -21,10 +21,6 @@ html.light-mode, body.light-mode {
 
 
 /* --- Global Styles & Fonts --- */
-html, body {
-  overflow-x: hidden;  /* Disable horizontal scroll for the page */
-}
-
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -325,7 +321,6 @@ a {
     .site-header {
         flex-direction: column;
         padding: 15px;
-        align-items: flex-start; /* Add this to left-align logo and title */
     }
     .main-nav {
         margin-top: 15px;
@@ -350,8 +345,8 @@ a {
   display: none;
   flex-direction: column;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   background: none;
   border: none;
   cursor: pointer;
@@ -361,7 +356,7 @@ a {
   display: block;
   height: 4px;
   width: 28px;
-  margin: 6px auto;
+  margin: 4px auto;
   background: #fff;
   border-radius: 2px;
   transition: 0.3s;
