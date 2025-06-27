@@ -47,25 +47,35 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- Reusable 3D Model Embed Loader ---
-    const embedTemplate = (id, posterUrl, viewerUrl) => `
-      <div style="position:relative;width:100%;height:100%;border:1px solid var(--surface-color);background:#111;overflow:hidden;box-sizing:border-box;">
-        <div id="cover-${id}" style="position:absolute;top:0;left:0;width:100%;height:100%;background:#111;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;">
-          <img src="${posterUrl}" alt="Cover Image" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.25;z-index:-1;">
-          <div style="z-index:3;text-align:center;">
-            <button class="embed-load-btn" style="margin:6px;padding:10px 20px;font-size:1rem;border:none;background:#0d6efd;color:#fff;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.5);cursor:pointer;">
-              ▶ Load 3D model
-            </button><br>
-            <a href="${viewerUrl}" target="_blank" class="embed-newtab-btn" style="display:inline-block;margin:6px;padding:10px 20px;font-size:1rem;background:#444;color:#eee;border-radius:10px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.5);">
-              ↗ Open in New Tab
-            </a>
-            <div style="color:#ccc;font-size:0.9rem;margin-top:12px;padding:0 10px;">
-              Controls: Orbit — click and drag | Zoom — scroll wheel | Pan — right click + drag
+    const embedTemplate = (id, posterUrl, viewerUrl) => {
+        // Detect if touch is available
+        const hasTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+        
+        // Set controls text based on touch availability
+        const controlsText = hasTouch 
+            ? 'Controls: Orbit — one finger drag | Zoom — pinch | Pan — two finger drag'
+            : 'Controls: Orbit — click and drag | Zoom — scroll wheel | Pan — right click + drag';
+            
+        return `
+          <div style="position:relative;width:100%;height:100%;border:1px solid var(--surface-color);background:#111;overflow:hidden;box-sizing:border-box;">
+            <div id="cover-${id}" style="position:absolute;top:0;left:0;width:100%;height:100%;background:#111;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;">
+              <img src="${posterUrl}" alt="Cover Image" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:0.25;z-index:-1;">
+              <div style="z-index:3;text-align:center;">
+                <button class="embed-load-btn" style="margin:6px;padding:10px 20px;font-size:1rem;border:none;background:#0d6efd;color:#fff;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.5);cursor:pointer;">
+                  ▶ Load 3D model
+                </button><br>
+                <a href="${viewerUrl}" target="_blank" class="embed-newtab-btn" style="display:inline-block;margin:6px;padding:10px 20px;font-size:1rem;background:#444;color:#eee;border-radius:10px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.5);">
+                  ↗ Open in New Tab
+                </a>
+                <div style="color:#ccc;font-size:0.9rem;margin-top:12px;padding:0 10px;">
+                  ${controlsText}
+                </div>
+              </div>
             </div>
+            <iframe id="iframe-${id}" style="width:100%;height:100%;border:none;background:#111;display:block;" loading="lazy" allow="fullscreen"></iframe>
           </div>
-        </div>
-        <iframe id="iframe-${id}" style="width:100%;height:100%;border:none;background:#111;display:block;" loading="lazy" allow="fullscreen"></iframe>
-      </div>
-    `;
+        `;
+    };
 
     const embedPlaceholders = document.querySelectorAll('.model-embed-placeholder');
     embedPlaceholders.forEach(placeholder => {
@@ -137,8 +147,4 @@ document.addEventListener("DOMContentLoaded", function() {
       window.addEventListener('resize', handleResize);
       handleResize();
     }
-      // On small screens the dropdown links are always visible, so the
-      // "3D Visualization" link should simply navigate without any extra
-      // toggle behavior. The previous handler intercepted the click and
-      // prevented navigation which broke the link on mobile.
 });
