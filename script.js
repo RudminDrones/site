@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // --- Reusable 3D Model Embed Loader ---
-// --- Reusable 3D Model Embed Loader ---
     const embedTemplate = (id, posterUrl, viewerUrl) => `
       <div style="position:relative;width:100%;height:100%;border:1px solid var(--surface-color);background:#111;overflow:hidden;box-sizing:border-box;">
         <div id="cover-${id}" style="position:absolute;top:0;left:0;width:100%;height:100%;background:#111;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;">
@@ -128,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function() {
       </div>
     `;
 
-    
+
     const embedPlaceholders = document.querySelectorAll('.model-embed-placeholder');
     embedPlaceholders.forEach(placeholder => {
         const id = placeholder.dataset.id;
