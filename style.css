@@ -250,6 +250,14 @@ a {
     max-width: 600px;
     margin: 10px auto;
 }
+.tagline .licensed-text {
+    font-size: 0.8em;
+    color: #888;
+    font-style: italic;
+    font-weight: normal;
+    max-width: 600px;
+    margin: 5px auto 10px auto;
+}
 
 .services .service-item {
     padding: 30px;
